@@ -13,6 +13,26 @@ public class Evento {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column
+    private String tituloEvento;
+
+    public String getTituloEvento() {
+        return tituloEvento;
+    }
+
+    public void setTituloEvento(String tituloEvento) {
+        this.tituloEvento = tituloEvento;
+    }
+
+    @Column
+    private String pontoDeEncontro;
+    @Column
+    private String nomeOrganizador;
+    @Column
+    private String contatoOrganizador;
+    @Column
+    private String instrucaoEspecial;
     @Column
     private LocalDate data;
     @Column
@@ -27,7 +47,7 @@ public class Evento {
     @Column
 
     private String descricao;
-    private byte[] image;
+
 
     public Long getId() {
         return id;
@@ -77,11 +97,35 @@ public class Evento {
         this.descricao = descricao;
     }
 
-    public byte[] getImage() {
-        return image;
+    public String getPontoDeEncontro() {
+        return pontoDeEncontro;
     }
 
-    public void setImage(byte[] image) {
-        this.image = image;
+    public void setPontoDeEncontro(String pontoDeEncontro) {
+        this.pontoDeEncontro = pontoDeEncontro;
+    }
+
+    public String getNomeOrganizador() {
+        return nomeOrganizador;
+    }
+
+    public void setNomeOrganizador(String nomeOrganizador) {
+        this.nomeOrganizador = nomeOrganizador;
+    }
+
+    public String getContatoOrganizador() {
+        return contatoOrganizador;
+    }
+
+    public void setContatoOrganizador(String contatoOrganizador) {
+        this.contatoOrganizador = contatoOrganizador;
+    }
+
+    public String getInstrucaoEspecial() {
+        return instrucaoEspecial;
+    }
+
+    public void setInstrucaoEspecial(String instrucaoEspecial) {
+        this.instrucaoEspecial = instrucaoEspecial;
     }
 }
