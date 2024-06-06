@@ -14,39 +14,39 @@ public class Evento {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+
     @Column
-    private String tituloEvento;
+    private String titulo;
 
-    public String getTituloEvento() {
-        return tituloEvento;
-    }
+    @Column
+    private String descricao;
 
-    public void setTituloEvento(String tituloEvento) {
-        this.tituloEvento = tituloEvento;
-    }
+    @Column
+    private String descricaoLocal;
 
     @Column
     private String pontoDeEncontro;
+
     @Column
     private String nomeOrganizador;
+
     @Column
     private String contatoOrganizador;
+
     @Column
     private String instrucaoEspecial;
+
     @Column
     private LocalDate data;
-    @Column
 
+    @Column
     private LocalTime hora;
-    @Column
 
+    @Column
     private Double latitude;
-    @Column
 
-    private Double longetude;
     @Column
-
-    private String descricao;
+    private Double longitude;
 
 
     public Long getId() {
@@ -57,44 +57,20 @@ public class Evento {
         this.id = id;
     }
 
-    public LocalDate getData() {
-        return data;
+    public String getTitulo() {
+        return titulo;
     }
 
-    public void setData(LocalDate data) {
-        this.data = data;
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
     }
 
-    public LocalTime getHora() {
-        return hora;
+    public String getDescricaoLocal() {
+        return descricaoLocal;
     }
 
-    public void setHora(LocalTime hora) {
-        this.hora = hora;
-    }
-
-    public Double getLatitude() {
-        return latitude;
-    }
-
-    public void setLatitude(Double latitude) {
-        this.latitude = latitude;
-    }
-
-    public Double getLongetude() {
-        return longetude;
-    }
-
-    public void setLongetude(Double longetude) {
-        this.longetude = longetude;
-    }
-
-    public String getDescricao() {
-        return descricao;
-    }
-
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
+    public void setDescricaoLocal(String descricaoLocal) {
+        this.descricaoLocal = descricaoLocal;
     }
 
     public String getPontoDeEncontro() {
@@ -128,4 +104,45 @@ public class Evento {
     public void setInstrucaoEspecial(String instrucaoEspecial) {
         this.instrucaoEspecial = instrucaoEspecial;
     }
+
+    public LocalDate getData() {
+        return data;
+    }
+
+    public void setData(LocalDate data) {
+        this.data = data;
+    }
+
+    public LocalTime getHora() {
+        return hora;
+    }
+
+    public void setHora(LocalTime hora) {
+        this.hora = hora;
+    }
+
+    public Double getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(Double latitude) {
+        this.latitude = latitude;
+    }
+
+    public Double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(Double longitude) {
+        this.longitude = longitude;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
 }

@@ -17,8 +17,10 @@ public class IncidenteCosteiro {
 
     @Column
     private String tipoDeDano;
+
     @Column
     private String localizacao;
+
     @Column
     private LocalDate data;
 

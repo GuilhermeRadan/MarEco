@@ -23,9 +23,16 @@ public class EventoController {
     public ResponseEntity cadatrarEvento(@RequestBody Evento evento){
         return ResponseEntity.status(HttpStatus.CREATED).body(eventoService.cadastrar(evento));
     }
+    @CrossOrigin(origins = "*")
     @GetMapping("/listar")
     public ResponseEntity listarEvento(){
         return ResponseEntity.ok(eventoService.listar());
+    }
+
+    @CrossOrigin(origins = "*")
+    @GetMapping("/obterPorId/{id}")
+    public ResponseEntity obterPorId(@PathVariable Long id) {
+        return ResponseEntity.ok(eventoService.obterPorId(id));
     }
 
 }
