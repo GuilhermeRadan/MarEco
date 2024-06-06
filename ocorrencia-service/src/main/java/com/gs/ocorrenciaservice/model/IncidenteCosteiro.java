@@ -22,11 +22,9 @@ public class IncidenteCosteiro {
     private String localizacao;
 
     @Column
-
     private LocalDate data;
 
     @Column
-
     private byte[] imagem;
 
     public Long getId() {

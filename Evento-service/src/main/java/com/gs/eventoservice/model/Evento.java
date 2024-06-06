@@ -14,6 +14,7 @@ public class Evento {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+
     @Column
     private String titulo;
 
@@ -46,6 +47,7 @@ public class Evento {
 
     @Column
     private Double longitude;
+
 
     public Long getId() {
         return id;
