@@ -3,10 +3,10 @@ package com.gs.eventoservice.service;
 import com.gs.eventoservice.model.Evento;
 import com.gs.eventoservice.repository.EventoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class EventoService {
@@ -24,5 +24,9 @@ public class EventoService {
 
     public List<Evento> listar() {
         return eventoRepository.findAll();
+    }
+
+    public Optional<Evento> obterPorId(Long id) {
+        return eventoRepository.findById(id);
     }
 }
