@@ -12,19 +12,14 @@ public class IncidenteCosteiro {
     private Long id;
 
     @Column
-    private String tipoIncidente;
-
-    @Column
-
-    private Double latitude;
-
-    @Column
-
-    private Double longetude;
-
-    @Column
 
     private String descricao;
+
+    @Column
+    private String tipoDeDano;
+
+    @Column
+    private String localizacao;
 
     @Column
 
@@ -42,28 +37,20 @@ public class IncidenteCosteiro {
         this.id = id;
     }
 
-    public String getTipoIncidente() {
-        return tipoIncidente;
+    public String getTipoDeDano() {
+        return tipoDeDano;
     }
 
-    public void setTipoIncidente(String tipoIncidente) {
-        this.tipoIncidente = tipoIncidente;
+    public void setTipoDeDano(String tipoDeDano) {
+        this.tipoDeDano = tipoDeDano;
     }
 
-    public Double getLatitude() {
-        return latitude;
+    public String getLocalizacao() {
+        return localizacao;
     }
 
-    public void setLatitude(Double latitude) {
-        this.latitude = latitude;
-    }
-
-    public Double getLongetude() {
-        return longetude;
-    }
-
-    public void setLongetude(Double longetude) {
-        this.longetude = longetude;
+    public void setLocalizacao(String localizacao) {
+        this.localizacao = localizacao;
     }
 
     public String getDescricao() {
